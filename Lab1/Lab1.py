@@ -40,12 +40,9 @@ def sequence():
 def graph():
     height = 9
     for i in range(height + 1): # вывожу ось Y и соответствующую точку
-        if i == height:
-            print(f"{height - i}{RED} {RESET}") # точка (0, 0)
-        else:
-            print(f"{height - i}\u001b[{round(2 + (height - i)**0.5)}G{RED} {RESET}")
-    print(" ", end="")
-    for i in range(int(height**0.5) + 1): # вывожу ось X
+        print(f"{height - i}\u001b[{round(2 + (height - i)**0.5)}G{RED} {RESET}")
+    print(" ", end="") # отступ вправо для оси X
+    for i in range(round(height**0.5) + 1): # вывожу ось X
         print(i, end="")
 
 
